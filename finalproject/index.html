@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/IndexPaintPrint.css" media="print"/>
+<meta name="Russells Final"/>
+<link rel="stylesheet" href="css/IndexPrint.css" media="print"/>	
+<meta name="description" content="Russell Arlt's Page" />
+<meta name="keywords" content="Github, Matthew, Simon, LinkedIn, CIT180, Assignments, Spotify, Playlist, teton, indexPaint, Paint"/>
+<link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'/>
+<title>Ol' Russy Final</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+body {
+    font-family: 'Aladin', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    background-color: blue;
+    background-image: url("media/teton.jpg");
+    width: 100%;
+    
+}
+h2{
+    background-color: whitesmoke;
+    width: auto;
+    opacity: .7;
+}
+h3{
+    background-color: whitesmoke;
+    width: 150px;
+    opacity: .7;
+}
+div{
+    flex: 1;
+}
+footer {
+    margin-top: 1000px;
+    width: 30%;
+    text-align: left;
+    background-color: black;
+    color: whitesmoke;
+padding-left: 20px;
+}
+.tetons
+{
+  /* The Image Used */
+  background-image: url("media/teton.jpg");
+  /* Full Height */
+  height: 100%;
+  /* Create Parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #656565;
+    display: block;
+    transition: 0.3;
+}
+
+.sidenav a:hover {
+    color: whitesmoke;
+}
+.sidenav a:link, a:visited, a:active{
+		color:palegoldenrod;
+		text-decoration:none;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 16px;
+    
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;} /* decreases padding-top for mobile */
+    .sidenav a {font-size: 18px;} /* decreases link font-size for mobile */
+}
+</style>
+</head>
+<body class="tetons">
+    <main>
+    <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://github.com/RiggityRussell" target="new">My Github!</a>
+        <a href="indexPaint.html" target="new">I paint Miniatures!</a>
+        <a href="https://www.linkedin.com/in/russell-arlt-2b1866203/" target="new">My LinkedIn</a>
+        <a href="https://lisabalbach.com/arlt9/CIT180/assignments.html" target="new">My CIT180 Assignments</a>
+        <a href="https://open.spotify.com/playlist/4kDIjLzpPiknmH6f1cPc0h?si=1bdfdefa3a0847ad" target="new">A Spotify Playlist</a>
+        <a href="https://www.vondayton.com/" target="new">Friend Matthew's Website!</a>
+        <a href="https://www.thingthing.us/" target="new">Friend Simon makes ART</a>
+    </nav>
+    <div id="main">
+    <h2>Hello! My name is Russell! Welcome to my webpage.</h2>
+    <h2>Click on the button to open the menu and see some stuff!</h2>
+    <h3>
+    <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776; <-- Button</span>
+    </h3>
+</div> 
+</body>
+<footer>
+    <p> &copy; Russell Arlt, NMC</p> 
+    <p>arlt9@mail.nmc.edu</p>
+    <p>Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1728536">David Mark</a> </p>
+</footer>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "400px";
+        document.getElementById("main").style.marginLeft = "400px"
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+    </script>
+</main>
+</html>

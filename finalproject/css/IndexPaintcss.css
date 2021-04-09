@@ -1,0 +1,134 @@
+﻿* {
+	box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+	font-size: xx-large;
+}
+h1:hover
+{
+	animation: pulse 5s infinite;
+}
+@keyframes pulse
+{
+	0% {color: purple; text-shadow: 1px black;}
+	50% {color: black; text-shadow: 10px 10px 2px lemonchiffon;}
+	100% {color: whitesmoke; text-shadow: 1px 1px darkgray;}
+}
+h2 {
+    font-size: 1em;
+}
+h3{
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:whitesmoke;
+    text-align:center;
+    text-shadow:1px 1px black;
+}
+img{
+	width:auto;
+	float:left;
+	max-height:200px;
+	border-radius:20px;
+	box-shadow:2px 2px black;
+
+}	
+a:link, a:visited, a:hover, a:active{
+		color:maroon;
+		text-decoration:none;
+}	
+/* css styling for menu */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: maroon;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: darkred;
+	color:white;
+	border-radius:10px;
+}
+	
+/* Style the css menu*/
+nav {
+    background-color: #333;
+	padding:10px;
+}
+/* style the header */	
+header {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}	
+/* Style the footer */
+footer {
+    background-color: black;
+    color: whitesmoke;
+	font-size:.8em;
+    padding: 10px;
+    text-align: right;
+}
+	
+ article > section {
+	text-align:center;
+	border: 2px #333 solid;
+	font-size:1em;
+    color: whitesmoke;
+	background-color: black;
+	max-height:400px;
+	overflow:auto;
+}
+aside{
+	margin:.5%;
+	box-shadow:1px 1px #333;
+    background-color: purple;
+    color: whitesmoke;
+	border-radius:10px;
+	padding:10px;	
+}	
+/* Grid Classes */
+.top{grid-area:t}
+.note{grid-area: n;}
+.bottom{grid-area: b;}
+.menu{grid-area: m;}
+.left{grid-area: l;}
+.middle{grid-area: mid;}
+.right{grid-area: r;}
+/* Default Grid Container*/
+.grid-container {
+	display: grid;
+	grid-template-rows: max-content;
+	grid-template-areas: 
+		't t t t t t'
+		'm m m m m m'
+		'l l mid mid r r'
+		'n n n n n n'
+		'b b b b b b';
+}
+@media (max-width: 600px) {
+.grid-container {
+	grid-template-areas: 
+		't t t t t t'
+		'n n n n n n'
+		'l l l l l l'
+		'mid mid mid mid mid mid'
+		'r r r r r r'
+		'm m m m m m'
+		'b b b b b b';
+}
+}
